@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>L'Espace Créatif — Musique & Écriture</title>
+  <meta name="description" content="Un espace ouvert pour s'exprimer, écrire des chansons, des livres et créer des liens.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #f9f6f0; --card: #ffffff; --text: #3e362e; --muted: #7a6f64; --accent: #c08a5d; --border: #e6dfd5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'DM Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; color: var(--text); line-height: 1.2; }
+    a { color: var(--accent); text-decoration: none; }
+    header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: rgba(249, 246, 240, 0.9); }
+    header h1 { font-size: 1.5rem; margin: 0; letter-spacing: 1px; }
+    nav a { margin-left: 20px; color: var(--text); font-size: 0.9rem; font-weight: 500; }
+    nav a:hover { color: var(--accent); }
+    .hero { text-align: center; padding: 100px 20px; max-width: 800px; margin: 0 auto; }
+    .hero h2 { font-size: 3.5rem; margin-bottom: 20px; font-style: italic; }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin: 0 auto 40px auto; }
+    .btn { display: inline-block; padding: 12px 30px; background-color: var(--accent); color: white; border-radius: 30px; font-weight: 600; transition: opacity 0.3s; }
+    .btn:hover { opacity: 0.8; color: white; }
+    .features { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+    .feature-card { background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border); flex: 1; min-width: 280px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+    .feature-card h3 { font-size: 1.8rem; margin-top: 0; }
+    footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 60px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>L'Espace Créatif</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Chansons</a>
+      <a href="#">Livres</a>
+      <a href="#">Rencontres</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h2>Là où les mots rencontrent les notes.</h2>
+      <p>Un espace ouvert pour s'exprimer, partager ses écrits, ses chansons et créer des liens avec d'autres artistes. Que vous soyez auteur, musicien ou simplement passionné, la porte est grande ouverte.</p>
+      <a href="#" class="btn">Rejoindre l'aventure</a>
+    </section>
+    <section class="features">
+      <div class="feature-card">
+        <h3>Écrire</h3>
+        <p>Des textes, des poèmes, des histoires ou des paroles de chansons. Un espace pour poser vos mots, sans jugement, et les partager avec le monde.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Composer</h3>
+        <p>La musique comme langage universel. Partagez vos mélodies, vos maquettes ou trouvez le musicien qui mettra en note vos plus beaux textes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Se Rencontrer</h3>
+        <p>Créer des contacts, échanger des idées, former des duos. Parce que la création prend tout son sens lorsqu'elle est partagée avec les autres.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 L'Espace Créatif — Un projet ouvert à tous.</p>
+  </footer>
+</body>
+</html>
