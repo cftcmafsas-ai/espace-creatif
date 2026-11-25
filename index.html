@@ -13,37 +13,75 @@
     body { margin: 0; font-family: 'DM Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
     h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; color: var(--text); line-height: 1.2; }
     a { color: var(--accent); text-decoration: none; }
-    header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: rgba(249, 246, 240, 0.9); }
-    header h1 { font-size: 1.5rem; margin: 0; letter-spacing: 1px; }
+    header { padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--border); background: rgba(249, 246, 240, 0.9); }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { height: 52px; width: auto; border-radius: 8px; }
+    .brand h1 { font-size: 1.5rem; margin: 0; letter-spacing: 1px; }
     nav a { margin-left: 20px; color: var(--text); font-size: 0.9rem; font-weight: 500; }
     nav a:hover { color: var(--accent); }
-    .hero { text-align: center; padding: 100px 20px; max-width: 800px; margin: 0 auto; }
-    .hero h2 { font-size: 3.5rem; margin-bottom: 20px; font-style: italic; }
-    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin: 0 auto 40px auto; }
-    .btn { display: inline-block; padding: 12px 30px; background-color: var(--accent); color: white; border-radius: 30px; font-weight: 600; transition: opacity 0.3s; }
+    .hero { text-align: center; padding: 40px 20px 60px; max-width: 800px; margin: 0 auto; }
+    .hero h2.nom { font-size: 3rem; margin: 0 0 16px; }
+    .hero .herologo { display: block; margin: 0 auto 28px; max-width: min(320px, 80%); height: auto; border-radius: 12px; }
+    .hero h2.accroche { font-size: 2.4rem; margin-bottom: 20px; font-style: italic; }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin: 0 auto 30px auto; }
+    .btn { display: inline-block; padding: 12px 30px; background-color: var(--accent); color: white; border-radius: 30px; font-weight: 600; transition: opacity 0.3s; border: 0; font-family: inherit; font-size: 1rem; cursor: pointer; }
     .btn:hover { opacity: 0.8; color: white; }
+    .contactbar { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-top: 24px; font-weight: 500; }
     .features { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
     .feature-card { background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border); flex: 1; min-width: 280px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
     .feature-card h3 { font-size: 1.8rem; margin-top: 0; }
+    .duo { max-width: 760px; margin: 26px auto; padding: 0 20px; }
+    .duo-card { background: var(--card); border: 1px solid var(--border); border-radius: 24px; box-shadow: 0 14px 34px rgba(0,0,0,.06); padding: 26px; text-align: center; }
+    .duo-card h2 { margin: 0 0 8px; font-size: 1.8rem; }
+    .duo-card p { margin: 0 0 18px; color: var(--muted); }
+    .duo-list { display: flex; flex-direction: column; gap: 18px; }
+    .duo-item { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 0 18px; border-bottom: 1px solid var(--border); }
+    .duo-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .duo-item b { font-size: 18px; font-weight: 600; }
+    .duo-item span { font-size: 14px; color: var(--muted); max-width: 520px; }
+    .duo-btn { display: inline-block; padding: 12px 24px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; font-size: 15px; }
+    .duo-btn:hover { filter: brightness(.96); color: #fff; }
+    #contact-accueil { max-width: 760px; margin: 40px auto; padding: 0 20px; text-align: center; }
+    #contact-accueil h2 { font-size: 2.2rem; margin-bottom: 4px; }
+    #contact-accueil .lead { color: var(--muted); margin-top: 0; }
+    #contact-accueil .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin: 16px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+    #contact-accueil .card h3 { margin: 0 0 6px; font-size: 1.5rem; }
+    #contact-accueil .contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: left; }
+    #contact-accueil label { display: block; font-size: 15px; font-weight: 500; }
+    #contact-accueil input, #contact-accueil textarea { display: block; width: 100%; margin-top: 6px; padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; }
+    #contact-accueil .contact-full { grid-column: 1/-1; }
+    #contact-accueil textarea { resize: vertical; }
+    #contact-accueil .btn[disabled] { opacity: .5; cursor: not-allowed; }
+    #contact-accueil .contact-note { font-size: 13px; color: var(--muted); }
     footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 60px; }
+    @media (max-width: 640px) { header { padding: 12px 16px; } nav a { margin: 0 12px 0 0; } .hero h2.nom { font-size: 2.3rem; } .hero h2.accroche { font-size: 1.8rem; } #contact-accueil .contact-fields { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <header>
-    <h1>L'Espace Créatif</h1>
+    <div class="brand">
+      <a href="/index.html"><img src="/logos.JPG" alt="Logo R"></a>
+      <h1>L'Espace Créatif</h1>
+    </div>
     <nav>
       <a href="#">Accueil</a>
       <a href="#">Chansons</a>
       <a href="#">Livres</a>
       <a href="#">Rencontres</a>
-      <a href="#">Contact</a>
+      <a href="#contact-accueil">Contact</a>
     </nav>
   </header>
   <main>
     <section class="hero">
-      <h2>Là où les mots rencontrent les notes.</h2>
+      <h2 class="nom">L'Espace Créatif</h2>
+      <img class="herologo" src="/rodolphe.JPG" alt="Rodolphe Torres Tirado">
+      <h2 class="accroche">Là où les mots rencontrent les notes.</h2>
       <p>Un espace ouvert pour s'exprimer, partager ses écrits, ses chansons et créer des liens avec d'autres artistes. Que vous soyez auteur, musicien ou simplement passionné, la porte est grande ouverte.</p>
-      <a href="#" class="btn">Rejoindre l'aventure</a>
+      <a href="#contact-accueil" class="btn">Rejoindre l'aventure</a>
+      <div class="contactbar">
+        <a href="https://wa.me/33769737356">07 69 73 73 56 (WhatsApp uniquement)</a>
+        <a href="mailto:rodolphetorres@outlook.fr">rodolphetorres@outlook.fr</a>
+      </div>
     </section>
     <section class="features">
       <div class="feature-card">
@@ -59,11 +97,46 @@
         <p>Créer des contacts, échanger des idées, former des duos. Parce que la création prend tout son sens lorsqu'elle est partagée avec les autres.</p>
       </div>
     </section>
+    <section class="duo" aria-label="Mes autres sites">
+      <div class="duo-card">
+        <h2>Mes autres sites</h2>
+        <p>Retrouvez mes autres espaces en un clic.</p>
+        <div class="duo-list">
+          <div class="duo-item"><b>Guérisseur de l’Âme</b><span>Accompagnement spirituel et bien-être.</span><a class="duo-btn" href="https://guerisseur-de-lame.rodolphetorres.workers.dev/">Accéder</a></div>
+          <div class="duo-item"><b>Ma Gestion Web</b><span>Présentation de Ma Gestion et accès à l’application.</span><a class="duo-btn" href="https://ma-gestion-web.rodolphetorres.workers.dev/">Accéder</a></div>
+          <div class="duo-item"><b>BLEU PRO</b><span>Espace de présentation et d’accès à l’application.</span><a class="duo-btn" href="https://bleu-pro.rodolphetorres.workers.dev/">Accéder</a></div>
+          <div class="duo-item"><b>Mes Documents</b><span>Espace de documents et ressources.</span><a class="duo-btn" href="https://mes-documents.rodolphetorres.workers.dev/">Accéder</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="contact-accueil" aria-labelledby="contact-accueil-titre">
+      <h2 id="contact-accueil-titre">Me contacter</h2>
+      <p class="lead">Ensemble, cheminons vers un mieux-être durable</p>
+      <div class="card">
+        <h3>WhatsApp uniquement</h3>
+        <p>07 69 73 73 56</p>
+        <p><a class="btn" href="https://wa.me/33769737356">Écrire sur WhatsApp ›</a></p>
+      </div>
+      <div class="card">
+        <h3>E-mail</h3>
+        <p>rodolphetorres@outlook.fr</p>
+        <p><a class="btn" href="mailto:rodolphetorres@outlook.fr">Envoyer un e-mail ›</a></p>
+      </div>
+      <form class="card" aria-describedby="contact-accueil-note" onsubmit="event.preventDefault();">
+        <div class="contact-fields">
+          <label for="contact-nom">Nom<input id="contact-nom" name="nom" autocomplete="family-name" required></label>
+          <label for="contact-prenom">Prénom<input id="contact-prenom" name="prenom" autocomplete="given-name" required></label>
+          <label for="contact-email" class="contact-full">Email<input id="contact-email" name="email" type="email" autocomplete="email" required></label>
+          <label for="contact-message" class="contact-full">Message<textarea id="contact-message" name="message" rows="6" required></textarea></label>
+        </div>
+        <p><button class="btn" type="button" disabled aria-describedby="contact-accueil-note">Envoyer</button></p>
+        <p id="contact-accueil-note" class="contact-note">L’envoi par formulaire n’est pas encore activé. Pour me contacter, utilisez WhatsApp ou le lien e-mail ci-dessus.</p>
+      </form>
+    </section>
   </main>
   <footer>
-    <p>© 2024 L'Espace Créatif — Un projet ouvert à tous.</p>
+    <p>L'Espace Créatif · <a href="https://wa.me/33769737356">07 69 73 73 56 (WhatsApp uniquement)</a> · <a href="mailto:rodolphetorres@outlook.fr">rodolphetorres@outlook.fr</a></p>
   </footer>
-<script src="/project-sites-nav.js"></script>
 <script src="/pastel-theme.js"></script>
 </body>
 </html>
