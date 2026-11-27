@@ -32,6 +32,7 @@
     "#pastel-theme-panel button[data-theme=origine]{grid-column:1/-1;justify-content:center;font-weight:700}#pastel-theme-panel button[data-theme=vanille]{grid-column:1/-1;justify-content:center}" +
     "#pastel-theme-panel[hidden]{display:none}" +
     "#pastel-theme-close{float:right;border:0;border-radius:50%;width:28px;height:28px;font-size:18px;line-height:1;cursor:pointer;background:var(--site-soft)!important;color:var(--site-text)!important}";
+  style.textContent += "\n#pastel-theme-panel{position:fixed;right:14px;bottom:82px;z-index:11000;width:min(310px,calc(100vw - 28px));padding:16px;background:var(--site-card);color:var(--site-text);border:1px solid var(--site-border);border-radius:22px;box-shadow:0 14px 38px rgba(50,60,80,.2);font:14px/1.45 system-ui,sans-serif}\n#pastel-theme-panel[hidden]{display:none!important}\n#pastel-theme-panel .pt-title{font-weight:700;margin:0 0 12px;padding-right:30px}\n#pastel-theme-panel .pt-colors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}\n#pastel-theme-panel button{display:flex;align-items:center;gap:8px;width:100%;padding:9px;border:1px solid var(--site-border);border-radius:12px;background:var(--site-soft)!important;color:var(--site-text)!important;font:12px system-ui,sans-serif;cursor:pointer}\n#pastel-theme-panel button[aria-pressed=true]{outline:2px solid var(--site-text);outline-offset:1px}\n#pastel-theme-panel button[data-theme=origine],#pastel-theme-panel button[data-theme=vanille]{grid-column:1/-1;justify-content:center;font-weight:700}\n#pastel-theme-panel i{display:block;width:20px;height:20px;flex:none;border-radius:50%;border:1px solid rgba(0,0,0,.08)}\n#pastel-theme-close{float:right;border:0;border-radius:50%;width:30px;height:30px;font-size:19px;line-height:1;cursor:pointer;background:var(--site-soft)!important;color:var(--site-text)!important}\n#pastel-theme-toggle{position:fixed;right:86px;bottom:18px;top:auto;z-index:11001;display:grid;place-items:center;width:54px;height:54px;padding:0;border:1px solid var(--site-border);border-radius:50%;background:linear-gradient(135deg,var(--site-soft),var(--site-accent))!important;color:var(--site-text)!important;font-size:27px;box-shadow:0 10px 28px rgba(48,91,127,.18);cursor:pointer}\n@media(max-width:520px){#pastel-theme-toggle{right:76px;bottom:16px;width:50px;height:50px}}\n";
   document.head.appendChild(style);
   function apply(id){
     var p=palettes.find(function(x){return x.id===id})||palettes[0];
@@ -45,7 +46,8 @@
     document.querySelectorAll("#pastel-theme-panel [data-theme]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.theme===p.id));});
   }
   var panel=document.createElement("aside");panel.id="pastel-theme-panel";panel.setAttribute("aria-label","Choisir une couleur pastel");
-  var toggle=document.createElement("button");toggle.id="pastel-theme-toggle";toggle.type="button";toggle.textContent="🎨 Couleurs pastel";
+  var toggle=document.createElement("button");toggle.id="pastel-theme-toggle";toggle.type="button";toggle.textContent="🎨";
+  toggle.setAttribute("aria-label","Ouvrir les couleurs");toggle.title="Changer les couleurs";
   var close=document.createElement("button");close.id="pastel-theme-close";close.type="button";close.textContent="×";close.setAttribute("aria-label","Fermer les couleurs");
   close.addEventListener("click",function(){panel.hidden=true;});
   var title=document.createElement("p");title.className="pt-title";title.textContent="Choisissez votre ambiance pastel";
