@@ -110,21 +110,29 @@ footer{background:var(--site-card,#fff);border-top:1px solid var(--site-border,#
 }
 
 
-/* Navigation : déclinaison en plusieurs tons de la palette sélectionnée. */
+/* Navigation : boutons nettement différenciés, dans les nuances de la palette active. */
 header nav a,
 header nav a:link,
 header nav a:visited{
-  background:color-mix(in srgb,var(--site-soft,#efe8dc) 72%,var(--site-accent,#c08a5d))!important;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:104px;
+  padding:9px 16px;
   color:var(--site-text,#3e362e)!important;
   border:1px solid var(--site-border,#e6dfd5)!important;
-  box-shadow:0 3px 10px rgba(40,55,45,.06);
+  border-radius:999px;
+  box-shadow:0 3px 10px rgba(40,55,45,.08);
+  font-weight:600;
+  transition:background .2s,transform .2s,box-shadow .2s;
 }
-header nav a:nth-child(2){background:color-mix(in srgb,var(--site-soft,#efe8dc) 84%,var(--site-accent,#c08a5d))!important}
-header nav a:nth-child(3){background:color-mix(in srgb,var(--site-soft,#efe8dc) 60%,var(--site-accent,#c08a5d))!important}
-header nav a:nth-child(4){background:color-mix(in srgb,var(--site-soft,#efe8dc) 76%,var(--site-accent,#c08a5d))!important}
-header nav a:nth-child(5){background:color-mix(in srgb,var(--site-soft,#efe8dc) 90%,var(--site-accent,#c08a5d))!important}
-header nav a:first-child{background:var(--site-accent,#c08a5d)!important;color:var(--site-text,#3e362e)!important;border-color:var(--site-accent,#c08a5d)!important}
-header nav a:hover{filter:brightness(.97);transform:translateY(-2px);box-shadow:0 6px 14px rgba(40,55,45,.10)}
+header nav a:nth-child(1){background:var(--site-accent,#c08a5d)!important}
+header nav a:nth-child(2){background:color-mix(in srgb,var(--site-soft,#efe8dc) 58%,var(--site-text,#3e362e))!important}
+header nav a:nth-child(3){background:color-mix(in srgb,var(--site-soft,#efe8dc) 72%,var(--site-text,#3e362e))!important}
+header nav a:nth-child(4){background:color-mix(in srgb,var(--site-soft,#efe8dc) 84%,var(--site-text,#3e362e))!important}
+header nav a:nth-child(5){background:color-mix(in srgb,var(--site-soft,#efe8dc) 92%,var(--site-text,#3e362e))!important}
+header nav a:hover{filter:brightness(.96);transform:translateY(-2px);box-shadow:0 7px 16px rgba(40,55,45,.13)}
+@media(max-width:640px){header nav a{min-width:0;padding:8px 12px}}
 
 </style>
 </head>
