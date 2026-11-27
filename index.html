@@ -110,7 +110,7 @@ footer{background:var(--site-card,#fff);border-top:1px solid var(--site-border,#
 }
 
 
-/* Navigation : boutons en nuances pastel douces, coordonnées à la palette du site. */
+/* Navigation : cinq vrais tons pastel lumineux de la palette du site. */
 header nav a,
 header nav a:link,
 header nav a:visited{
@@ -119,21 +119,21 @@ header nav a:visited{
   justify-content:center;
   min-width:104px;
   padding:9px 16px;
-  color:var(--site-text,#3e362e)!important;
-  border:1px solid var(--site-border,#e6dfd5)!important;
+  color:#4b5060!important;
+  border:1px solid rgba(95,105,130,.12)!important;
   border-radius:999px;
-  box-shadow:0 3px 10px rgba(40,55,45,.06);
+  box-shadow:0 4px 12px rgba(70,80,110,.08);
   font-weight:600;
   transition:background .2s,transform .2s,box-shadow .2s;
 }
-/* Chaque bouton garde une nuance claire : aucune couleur foncée. */
-header nav a:nth-child(1){background:color-mix(in srgb,var(--site-accent,#c08a5d) 48%,var(--site-card,#fff))!important}
-header nav a:nth-child(2){background:color-mix(in srgb,var(--site-soft,#efe8dc) 72%,var(--site-card,#fff))!important}
-header nav a:nth-child(3){background:color-mix(in srgb,var(--site-accent,#c08a5d) 28%,var(--site-card,#fff))!important}
-header nav a:nth-child(4){background:color-mix(in srgb,var(--site-soft,#efe8dc) 48%,var(--site-card,#fff))!important}
-header nav a:nth-child(5){background:color-mix(in srgb,var(--site-border,#e6dfd5) 52%,var(--site-card,#fff))!important}
-header nav a:hover{filter:brightness(.98);transform:translateY(-2px);box-shadow:0 6px 14px rgba(40,55,45,.08)}
+header nav a:nth-child(1){background:#cdd9f7!important}
+header nav a:nth-child(2){background:#f0d0d9!important}
+header nav a:nth-child(3){background:#d2ece0!important}
+header nav a:nth-child(4){background:#f7dbca!important}
+header nav a:nth-child(5){background:#f5ebc6!important}
+header nav a:hover{filter:saturate(1.08);transform:translateY(-2px);box-shadow:0 7px 16px rgba(70,80,110,.12)}
 @media(max-width:640px){header nav a{min-width:0;padding:8px 12px}}
+
 
 </style>
 </head>
