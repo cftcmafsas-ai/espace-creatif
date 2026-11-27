@@ -109,6 +109,23 @@ footer{background:var(--site-card,#fff);border-top:1px solid var(--site-border,#
  footer{padding:28px 16px}
 }
 
+
+/* Navigation : déclinaison en plusieurs tons de la palette sélectionnée. */
+header nav a,
+header nav a:link,
+header nav a:visited{
+  background:color-mix(in srgb,var(--site-soft,#efe8dc) 72%,var(--site-accent,#c08a5d))!important;
+  color:var(--site-text,#3e362e)!important;
+  border:1px solid var(--site-border,#e6dfd5)!important;
+  box-shadow:0 3px 10px rgba(40,55,45,.06);
+}
+header nav a:nth-child(2){background:color-mix(in srgb,var(--site-soft,#efe8dc) 84%,var(--site-accent,#c08a5d))!important}
+header nav a:nth-child(3){background:color-mix(in srgb,var(--site-soft,#efe8dc) 60%,var(--site-accent,#c08a5d))!important}
+header nav a:nth-child(4){background:color-mix(in srgb,var(--site-soft,#efe8dc) 76%,var(--site-accent,#c08a5d))!important}
+header nav a:nth-child(5){background:color-mix(in srgb,var(--site-soft,#efe8dc) 90%,var(--site-accent,#c08a5d))!important}
+header nav a:first-child{background:var(--site-accent,#c08a5d)!important;color:var(--site-text,#3e362e)!important;border-color:var(--site-accent,#c08a5d)!important}
+header nav a:hover{filter:brightness(.97);transform:translateY(-2px);box-shadow:0 6px 14px rgba(40,55,45,.10)}
+
 </style>
 </head>
 <body>
