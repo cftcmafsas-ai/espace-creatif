@@ -67,6 +67,48 @@ header nav a{margin:0;padding:8px 14px;border-radius:999px;background:#efe8dc}
 .hero{padding-top:38px}
 @media(max-width:640px){header{padding:10px 12px;gap:8px}.brand img{height:60px;width:60px}.brand h1{font-size:clamp(1.45rem,6vw,2.1rem);white-space:normal}header nav{gap:6px}header nav a{font-size:.82rem;padding:7px 10px}}
 
+
+/* Harmonisation visuelle — structure et contenus conservés, palette existante respectée. */
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 12% 0%,var(--site-card,#fff) 0%,var(--site-bg,#f9f6f0) 58%,var(--site-soft,#efe8dc) 100%);line-height:1.7}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--site-card,#fff) 92%,transparent);backdrop-filter:blur(14px);box-shadow:0 5px 22px rgba(40,55,45,.06);border-bottom:1px solid var(--site-border,#e6dfd5)}
+.brand img{border-radius:18px;filter:drop-shadow(0 5px 10px rgba(35,55,40,.12))}
+.brand h1{font-size:clamp(2rem,4vw,3rem);letter-spacing:.02em}
+header nav a{border:1px solid var(--site-border,#e6dfd5);transition:transform .18s,box-shadow .18s,background .18s}
+header nav a:hover{transform:translateY(-2px);box-shadow:0 5px 14px rgba(35,55,40,.08)}
+.hero{max-width:1120px;padding:clamp(38px,6vw,76px) clamp(18px,4vw,44px);margin:28px auto 18px;border:1px solid var(--site-border,#e6dfd5);border-radius:30px;background:radial-gradient(ellipse at 10% 10%,var(--site-card,#fff),transparent 58%),linear-gradient(140deg,var(--site-soft,#efe8dc),var(--site-bg,#f9f6f0));box-shadow:0 14px 40px rgba(45,60,48,.07)}
+.hero h2.accroche{font-size:clamp(2.2rem,5vw,3.5rem);margin:0 0 18px}
+.hero p{font-size:clamp(1.05rem,2vw,1.2rem);line-height:1.8}
+.btn,.duo-btn{border:1px solid var(--site-border,#e6dfd5);box-shadow:0 7px 18px rgba(45,60,48,.10);transition:transform .18s,box-shadow .18s,filter .18s}
+.btn:hover,.duo-btn:hover{transform:translateY(-2px);box-shadow:0 11px 24px rgba(45,60,48,.14);filter:brightness(1.02)}
+.contactbar{display:inline-flex;max-width:100%;padding:12px 18px;border:1px solid var(--site-border,#e6dfd5);border-radius:18px;background:var(--site-card,#fff);box-shadow:0 5px 18px rgba(45,60,48,.05)}
+.contactbar a{overflow-wrap:anywhere}
+.features{max-width:1160px;gap:20px;padding:28px 20px 46px}
+.feature-card{border-radius:24px;box-shadow:0 10px 28px rgba(45,60,48,.07);transition:transform .2s,box-shadow .2s}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(45,60,48,.11)}
+.feature-card h3{font-size:clamp(1.6rem,3vw,2rem)}
+.duo{max-width:920px;margin:24px auto 42px}
+.duo-card,#contact-accueil .card{border-radius:24px;box-shadow:0 10px 30px rgba(45,60,48,.07)}
+.duo-card{padding:clamp(22px,4vw,38px)}
+.duo-item{padding:10px 0 20px}
+.duo-btn{min-width:132px}
+#contact-accueil{max-width:900px;margin:44px auto;padding:0 20px}
+#contact-accueil h2{font-size:clamp(2rem,4vw,2.7rem)}
+#contact-accueil .card{padding:clamp(18px,3vw,28px)}
+#contact-accueil input,#contact-accueil textarea{transition:border-color .18s,box-shadow .18s}
+#contact-accueil input:focus,#contact-accueil textarea:focus{outline:none;border-color:var(--site-accent,#c08a5d);box-shadow:0 0 0 3px var(--site-soft,#efe8dc)}
+footer{background:var(--site-card,#fff);border-top:1px solid var(--site-border,#e6dfd5)}
+@media(max-width:640px){
+ header{position:relative;padding:12px 14px}
+ .brand img{height:60px;width:60px}
+ .hero{margin:14px 12px;border-radius:22px;padding:34px 18px 38px}
+ .features{gap:14px;padding:18px 14px 34px}
+ .feature-card{min-width:min(100%,280px);padding:24px}
+ .duo{margin:16px auto 32px;padding:0 12px}
+ #contact-accueil{margin:32px auto;padding:0 12px}
+ footer{padding:28px 16px}
+}
+
 </style>
 </head>
 <body>
